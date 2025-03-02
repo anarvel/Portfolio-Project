@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -64,7 +65,7 @@ public class JobSearch {
 
     /**
      * Adds a new job posting to the system
-     * 
+     *
      * @param job
      */
     public final void addJob(JobPosting job) {
@@ -75,7 +76,7 @@ public class JobSearch {
 
     /**
      * Retrieves all job postings.
-     * 
+     *
      * @return all the job postings
      */
     public List<JobPosting> getAllJobs() {
@@ -89,7 +90,7 @@ public class JobSearch {
 
     /**
      * Removes a job posting.
-     * 
+     *
      * @param jobID
      *            (job identifier #)
      */
@@ -104,7 +105,7 @@ public class JobSearch {
 
     /**
      * Filters a job by the required qualification.
-     * 
+     *
      * @param qualification
      * @return list of matching jobs
      */
@@ -120,7 +121,7 @@ public class JobSearch {
 
     /**
      * Filters a job based on work authorization.
-     * 
+     *
      * @param status
      * @return list of matching jobs
      */
@@ -136,7 +137,7 @@ public class JobSearch {
 
     /**
      * Filters a job based on languages spoken.
-     * 
+     *
      * @param languages
      * @return list of matching jobs
      */
@@ -152,7 +153,7 @@ public class JobSearch {
 
     /**
      * Filters a job based on location.
-     * 
+     *
      * @param location
      * @return list of matching jobs
      */
@@ -168,7 +169,7 @@ public class JobSearch {
 
     /**
      * Filters a job based on multiple criteria.
-     * 
+     *
      * @param list
      *            of criteria (map??)
      * @return list of matching jobs
@@ -191,6 +192,36 @@ public class JobSearch {
     public record JobPosting(String jobID, String title, String company,
             List<String> qualifications, String workAuthorization,
             List<String> languages, String location) {
+    }
+
+    /**
+     * Main method.
+     */
+    public static void main(String[] args) {
+        // um would add example jobs here i think
+        // need to also let employers add jobs but for right now to test we can just add an example job
+        JobPosting job1 = new JobPosting("101", "Customer Service", "BestBuy",
+                "Customer Service", "Sponsorship Available",
+                List.of("English", "Spanish"), "Columbus");
+        jobSearch.addJob(job1);
+
+        JobPosting job1 = new JobPosting("102", "Technician", "BestBuy",
+                "Computer Skills", "Work Visa", "English", "Columbus");
+        jobSearch.addJob(job1);
+
+        Map<String, String> criteria = new HashMap<>();
+        criteria.put("languages", "Spanish");
+        criteria.put("location", "Columbus");
+        criteria.put("workAuthorization", "Sponsorship Available");
+
+        System.out.println(
+                "Filtered Jobs (Spanish, Columbus, Sponsorship Available):");
+        List<JobPosting> filteredJobs = jobSearch
+                .filterByMultiCriteria(criteria);
+
+        for (JobPosting job : filteredJobs) {
+            System.out.println(job);
+        }
     }
 
 }
