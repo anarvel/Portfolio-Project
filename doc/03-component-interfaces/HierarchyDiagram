@@ -1,0 +1,13 @@
+                  +-------------------------+
+                  |     JobSearchKernel     |  <-- Kernel Interface
+                  +-------------------------+
+                           ^
+                           |
+                  +-------------------------+
+                  |        JobSearch        |  <-- Extends JobSearchKernel
+                  +-------------------------+
+                           ^
+                           |
+                  +-------------------------+
+                  |    JobSearchComponent   |  <-- Implements JobSearch
+                  +-------------------------+
