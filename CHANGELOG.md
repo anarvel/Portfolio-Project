@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## 2025.3.27
+
+### Added
+
+- Designed abstract class for Job Search component
+
 ## [2025.2.24]
 
 ### Added
