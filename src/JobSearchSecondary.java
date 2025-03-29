@@ -3,8 +3,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Abtrast class for a Job Search system.
- * Provides implemenation for filtering using kernel methods.
+ * Abtrast class for a Job Search system. Provides implemenation for filtering
+ * using kernel methods.
  *
  * @author Azra
  * @version 1.0
@@ -56,7 +56,8 @@ public class JobSearchSecondary implements JobSearch {
     }
 
     @Override
-    public List<JobPosting> filterByMultiCriteria(Map<String, String> criteria) {
+    public List<JobPosting> filterByMultiCriteria(
+            Map<String, String> criteria) {
         List<JobPosting> filteredJobs = new ArrayList<>();
         for (JobPosting job : this.getAllJobs()) {
             boolean matchesAll = true;
@@ -64,16 +65,16 @@ public class JobSearchSecondary implements JobSearch {
                 String key = entry.getKey();
                 String value = entry.getValue();
                 if (key.equalsIgnoreCase("qualification")
-                    && !job.getQualification().equalsIgnoreCase(value)) {
+                        && !job.getQualification().equalsIgnoreCase(value)) {
                     matchesAll = false;
-                } else if (key.equalsIgnoreCase("workAuthorization")
-                           && !job.getWorkAuthorization().equalsIgnoreCase(value)) {
+                } else if (key.equalsIgnoreCase("workAuthorization") && !job
+                        .getWorkAuthorization().equalsIgnoreCase(value)) {
                     matchesAll = false;
                 } else if (key.equalsIgnoreCase("languages")
-                          && !job.getLanguagesSpoken().contains(value)) {
+                        && !job.getLanguagesSpoken().contains(value)) {
                     matchesAll = false;
                 } else if (key.equalsIgnoreCase("location")
-                          && !job.getLocation().equalsIgnoreCase(value)) {
+                        && !job.getLocation().equalsIgnoreCase(value)) {
                     matchesAll = false;
                 }
             }
@@ -86,13 +87,21 @@ public class JobSearchSecondary implements JobSearch {
 
     @Override
     public boolean equals(Object obj) {
-        // not sure how to implement
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+
+        JobSearchComponent other = (JobSearchComponent) obj;
+        return this.getAllJobs().equals(other.getAllJobs());
     }
 
     @Override
     public String toString() {
-        // not sure how to implement
+        return "JobSearchComponent with " + this.getAllJobs().size()
+                + " job postings.";
     }
-
 
 }
