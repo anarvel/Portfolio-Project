@@ -6,18 +6,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-<<<<<<< Updated upstream
-## 2025.03.19
+## 2025.4.12
 
 ### Added
 
-- Designed kernel and enhanced interfaces for JobSearch component
+- Designed kernel implementation for JobSearch component
 
 ## 2025.3.27
 
 ### Added
 
 - Designed abstract class for Job Search component
+
+## 2025.03.19
+
+### Added
+
+- Designed kernel and enhanced interfaces for JobSearch component
 
 ## [2025.2.24]
 
@@ -31,15 +36,6 @@ Added
 
 - Designed a JobFilter component
 - Designed a Genetic Mutation Simulator component
-=======
-## [2025.2.06]
-
-### Added
-
-- Designed a JobFilter component
-- Designed a Genetic Mutation Simulator  component
->>>>>>> Stashed changes
-- Designed a Patient Vital Signs Monitor component
 
 ## [2024.12.30]
 
