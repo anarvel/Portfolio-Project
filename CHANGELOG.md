@@ -12,6 +12,12 @@ the following form: YYYY.0M.0D.
 
 - Designed kernel and enhanced interfaces for JobSearch component
 
+## 2025.3.27
+
+### Added
+
+- Designed abstract class for Job Search component
+
 ## [2025.2.24]
 
 ### Added
