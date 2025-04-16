@@ -1,12 +1,11 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Azra Narvel 
+- **Dot Number**: Narvel.4
+- **Due Date**: 2/4 
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,7 +28,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -52,8 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -67,7 +63,6 @@ project. Specifically, students should be able to:
 
 ## Assignment Rubric: 10 Points
 
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +101,15 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I am a Data Analytics major but more so interested in social science and advocacy. I would like to use my data knowledge to make a positive impact on the world and contribute positively to society. That may be through creating visualizations that combat stereotypes or helping non profits with data analysis. 
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -131,8 +118,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +185,121 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: JobFilter 
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A component that filters job postings based on critera relevant to immigrants. This includes fluency in languages, documentation status, qualifications, location, work authorization. 
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - addJob(JobPosting job): Adds a new job posting to the system.
+    - List<JobPosting> getAllJobs(): Retrieves all job postings.
+    - removeJob(String jobID): Removes a job posting   
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - List<JobPosting> filterByQualification(String qualification): Returns jobs that match a given qualification.
+    - List<JobPosting> filterByWorkAuthorization(String status): Filters jobs based on work authorization requirements (e.g., “Citizen,” “Work Visa,” “Sponsorship Available”).
+    - List<JobPosting> filterByLanguage(String language): Filters jobs that require or prefer a specific language.
+    - List<JobPosting> filterByLocation(String location): Returns jobs in a given area.
+    - List<JobPosting> multiFilter(Map<String, String> criteria): Allows users to filter by multiple criteria at once.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes because you can add new jobs. 
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes because each job posting has details about it
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - i dont know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes, multiFilter will use kernals to filter
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Genetic Mutation Simulator 
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Models how genetic mutations occur over generations, with the ability to simulate effects on traits.
+    - Each organism has a genetic sequence, which can mutate due to random changes.
+    - The simulator tracks how traits evolve over multiple generations based on inheritance and mutation rates.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - void initializePopulation(int size, int geneLength)
+    Creates an initial population with random genetic sequences.
+    - String mutateGene(String geneSequence, double mutationRate)
+    Applies random mutations (e.g., substitutions, insertions, deletions) based on a given mutation rate.
+    - List<String> generateOffspring(String parent1, String parent2)
+    Simulates inheritance by combining genes from two parents.
+    - double calculateFitness(String geneSequence)
+    Determines how "fit" an individual is based on predefined trait advantages.
+    - void evolveNextGeneration()
+    Uses selection and mutation to create a new generation.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void runSimulation(int generations, int populationSize, int geneLength, double mutationRate)
+    Runs the simulation for a specified number of generations.
+    - void displayPopulationStats()
+    Prints or visualizes population statistics, such as average fitness.
+    - String selectFittest()
+    Chooses the fittest individual from the current population.
+
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because the genetic sequences of individuals in the population will change over time due to mutation and evolution.
+      Each new generation modifies the state of the population.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, it could benefit from a GeneSequence class to represent individual genetic sequences.
+      Another potential internal class is Organism, which could store both the genetic sequence and fitness score.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Constants for mutation rates, fitness weights, and population limits would also be useful.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+        - Yes. Secondary methods will call kernel methods to execute complex tasks.
+        - Example: evolveNextGeneration()
+
+            Calls selectFittest() to pick the best individuals.
+            Uses generateOffspring() to create the next generation.
+Applies mutateGene() to introduce mutations.
+
+- Component Design #3: Patient Vital Signs Monitor
+  - **Description**:
+    - Models how a system tracks and analyzes patient vital signs (heart rate, blood pressure, oxygen levels, temperature).
+    - Detects abnormal readings and triggers alerts if values exceed safe thresholds.
+
+  - **Kernel Methods**:
+    - void updateVitals(int hr, int sysBP, int diaBP, int oxygen, double temp)
+    Updates the stored vital sign values for a patient.
+    - VitalSigns getVitals()
+    Returns the current recorded vitals.
+     - boolean isHeartRateNormal()
+      Returns true if the heart rate is within normal limits, otherwise false.
+      - boolean isBloodPressureNormal()
+      Returns true if blood pressure is within normal limits, otherwise false.
+      - boolean isOxygenLevelNormal()
+      Returns true if oxygen levels are within normal limits, otherwise false.
+      - boolean isTemperatureNormal()
+      Returns true if body temperature is within normal limits, otherwise false.
+      - List<String> checkAllVitals()
+      Returns a list of alerts for any abnormal vitals detected.
+  - **Secondary Methods**:
+    - String generateVitalsReport()
+    Returns a formatted report of the patient’s vitals, including any warnings.
+    - boolean isCriticalCondition()
+    Uses checkAllVitals() to determine if multiple vitals are abnormal at once.
+    - void resetVitals()
+    Clears all stored vital signs (e.g., resets values to defaults).
+    - boolean isEmergencyAlert()
+    Returns true if a critical threshold (e.g., dangerously high BP or oxygen <85%) is reached.
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable
+    answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+      - Yes, because vital signs change over time, so we need to update stored values frequently.
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
+      Answer and explain:
+      - Yes, we would likely use a VitalSigns class or struct to store and return data efficiently.>
+    - Would this component need any enums or constants (e.g.,
+      `Program.Instruction`)? Answer and explain:
+      - Yes, for defining normal and critical threshold values
+    - Can you implement your secondary methods using your kernel methods?
+      Answer, explain, and give at least one example:
+      - Yes, For example, isCriticalCondition() can use checkAllVitals() to determine if multiple vitals are abnormal:
 
 ## Post-Assignment
 
