@@ -1,11 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: Azra Narvel 
+- **Name**: Azra Narvel
 - **Dot Number**: Narvel.4
-- **Due Date**: 2/4 
+- **Due Date**: 2/4
 
 ## Assignment Overview
-
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -27,7 +26,6 @@ detailed feedback, which may help you decide which component to ultimately
 implement.
 
 ## Assignment Checklist
-
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -62,7 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -101,7 +98,7 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-I am a Data Analytics major but more so interested in social science and advocacy. I would like to use my data knowledge to make a positive impact on the world and contribute positively to society. That may be through creating visualizations that combat stereotypes or helping non profits with data analysis. 
+I am a Data Analytics major but more so interested in social science and advocacy. I would like to use my data knowledge to make a positive impact on the world and contribute positively to society. That may be through creating visualizations that combat stereotypes or helping non profits with data analysis.
 
 ## Assignment
 
@@ -185,13 +182,13 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: JobFilter 
+- Component Design #1: JobFilter
   - **Description**:
-    - A component that filters job postings based on critera relevant to immigrants. This includes fluency in languages, documentation status, qualifications, location, work authorization. 
+    - A component that filters job postings based on critera relevant to immigrants. This includes fluency in languages, documentation status, qualifications, location, work authorization.
   - **Kernel Methods**:
     - addJob(JobPosting job): Adds a new job posting to the system.
     - List<JobPosting> getAllJobs(): Retrieves all job postings.
-    - removeJob(String jobID): Removes a job posting   
+    - removeJob(String jobID): Removes a job posting
   - **Secondary Methods**:
     - List<JobPosting> filterByQualification(String qualification): Returns jobs that match a given qualification.
     - List<JobPosting> filterByWorkAuthorization(String status): Filters jobs based on work authorization requirements (e.g., “Citizen,” “Work Visa,” “Sponsorship Available”).
@@ -201,7 +198,7 @@ will likely refine your design to make your implementation easier to use.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - Yes because you can add new jobs. 
+      - Yes because you can add new jobs.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
       - Yes because each job posting has details about it
@@ -212,7 +209,7 @@ will likely refine your design to make your implementation easier to use.
       Answer, explain, and give at least one example:
       - yes, multiFilter will use kernals to filter
 
-- Component Design #2: Genetic Mutation Simulator 
+- Component Design #2: Genetic Mutation Simulator
   - **Description**:
     - Models how genetic mutations occur over generations, with the ability to simulate effects on traits.
     - Each organism has a genetic sequence, which can mutate due to random changes.
@@ -251,11 +248,12 @@ will likely refine your design to make your implementation easier to use.
       - Constants for mutation rates, fitness weights, and population limits would also be useful.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-        - Yes. Secondary methods will call kernel methods to execute complex tasks.
-        - Example: evolveNextGeneration()
+      - Yes. Secondary methods will call kernel methods to execute complex tasks.
+      - Example: evolveNextGeneration()
 
             Calls selectFittest() to pick the best individuals.
             Uses generateOffspring() to create the next generation.
+
 Applies mutateGene() to introduce mutations.
 
 - Component Design #3: Patient Vital Signs Monitor
@@ -268,15 +266,15 @@ Applies mutateGene() to introduce mutations.
     Updates the stored vital sign values for a patient.
     - VitalSigns getVitals()
     Returns the current recorded vitals.
-     - boolean isHeartRateNormal()
+    - boolean isHeartRateNormal()
       Returns true if the heart rate is within normal limits, otherwise false.
-      - boolean isBloodPressureNormal()
+    - boolean isBloodPressureNormal()
       Returns true if blood pressure is within normal limits, otherwise false.
-      - boolean isOxygenLevelNormal()
+    - boolean isOxygenLevelNormal()
       Returns true if oxygen levels are within normal limits, otherwise false.
-      - boolean isTemperatureNormal()
+    - boolean isTemperatureNormal()
       Returns true if body temperature is within normal limits, otherwise false.
-      - List<String> checkAllVitals()
+    - List<String> checkAllVitals()
       Returns a list of alerts for any abnormal vitals detected.
   - **Secondary Methods**:
     - String generateVitalsReport()
@@ -307,8 +305,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -347,8 +343,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -357,11 +351,7 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
-
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -387,8 +377,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/

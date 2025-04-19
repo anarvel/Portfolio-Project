@@ -1,21 +1,25 @@
+package components;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 /**
- * Abtrast class for a Job Search system. Provides implemenation for filtering
- * using kernel methods.
+ * Abstract class for a Job Search system. Provides default implementations for
+ * filtering job postings using kernel methods defined in the JobSearch
+ * interface.
+ * <p>
  *
  * @author Azra
  * @version 1.0
  */
-public class JobSearchSecondary implements JobSearch {
+public abstract class JobSearchSecondary implements JobSearch {
 
     @Override
     public List<JobPosting> filterByQualification(String qualification) {
         List<JobPosting> filteredJobs = new ArrayList<>();
         for (JobPosting job : this.getAllJobs()) {
-            if (job.getQualification().equalsIgnoreCase(qualification)) {
+            if (job.qualifications().contains(qualification)) {
                 filteredJobs.add(job);
             }
         }
@@ -26,7 +30,7 @@ public class JobSearchSecondary implements JobSearch {
     public List<JobPosting> filterByWorkAuthorization(String status) {
         List<JobPosting> filteredJobs = new ArrayList<>();
         for (JobPosting job : this.getAllJobs()) {
-            if (job.getWorkAuthorization().equalsIgnoreCase(status)) {
+            if (job.workAuthorization().equalsIgnoreCase(status)) {
                 filteredJobs.add(job);
             }
         }
@@ -37,7 +41,7 @@ public class JobSearchSecondary implements JobSearch {
     public List<JobPosting> filterByLanguages(String languages) {
         List<JobPosting> filteredJobs = new ArrayList<>();
         for (JobPosting job : this.getAllJobs()) {
-            if (job.getLanguagesSpoken().contains(languages)) {
+            if (job.languages().contains(languages)) {
                 filteredJobs.add(job);
             }
         }
@@ -48,7 +52,7 @@ public class JobSearchSecondary implements JobSearch {
     public List<JobPosting> filterByLocation(String location) {
         List<JobPosting> filteredJobs = new ArrayList<>();
         for (JobPosting job : this.getAllJobs()) {
-            if (job.getLocation().equalsIgnoreCase(location)) {
+            if (job.location().equalsIgnoreCase(location)) {
                 filteredJobs.add(job);
             }
         }
@@ -65,16 +69,16 @@ public class JobSearchSecondary implements JobSearch {
                 String key = entry.getKey();
                 String value = entry.getValue();
                 if (key.equalsIgnoreCase("qualification")
-                        && !job.getQualification().equalsIgnoreCase(value)) {
+                        && !job.qualifications().contains(value)) {
                     matchesAll = false;
-                } else if (key.equalsIgnoreCase("workAuthorization") && !job
-                        .getWorkAuthorization().equalsIgnoreCase(value)) {
+                } else if (key.equalsIgnoreCase("workAuthorization")
+                        && !job.workAuthorization().equalsIgnoreCase(value)) {
                     matchesAll = false;
                 } else if (key.equalsIgnoreCase("languages")
-                        && !job.getLanguagesSpoken().contains(value)) {
+                        && !job.languages().contains(value)) {
                     matchesAll = false;
                 } else if (key.equalsIgnoreCase("location")
-                        && !job.getLocation().equalsIgnoreCase(value)) {
+                        && !job.location().equalsIgnoreCase(value)) {
                     matchesAll = false;
                 }
             }
@@ -90,17 +94,22 @@ public class JobSearchSecondary implements JobSearch {
         if (this == obj) {
             return true;
         }
-        if (obj == null || getClass() != obj.getClass()) {
+        if (obj == null || !(obj instanceof JobSearch)) {
             return false;
         }
 
-        JobSearchComponent other = (JobSearchComponent) obj;
+        JobSearch other = (JobSearch) obj;
         return this.getAllJobs().equals(other.getAllJobs());
     }
 
     @Override
+    public int hashCode() {
+        return this.getAllJobs().hashCode();
+    }
+
+    @Override
     public String toString() {
-        return "JobSearchComponent with " + this.getAllJobs().size()
+        return "JobSearch with " + this.getAllJobs().rightLength()
                 + " job postings.";
     }
 
