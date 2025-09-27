@@ -303,18 +303,19 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-I understand software development a lot better after this project as I got to implement something interesting to me and start from the complete beginning of the design.
+I understand software development a lot better after this project because I got to implement something meaningful to me and start from scratch with the design process. It felt closer to real world development than most class assignments since I had to consider both structure and usability. Building the software component from the ground up helped me see how all the pieces (interfaces, abstract classes, and concrete implementations) fit together to create a usable product.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-Yes I was confused on how all the classes and interfaces work together and now that J designed it from scratch I understand better.
+Yes, one major gap I noticed was in how different classes and interfaces interact. It was confusing to think about what should be abstracted vs implemented directly. Designing the full component myself helped understsnd those concepts. 
+
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-I think software development is fun when implementing something I care about. It's not something I would want to pursure as a career though.
+I think software development can be really fun, especially when I get to implement something I care about or find interesting. That creative element of building something from an idea was really fulfilling. However, I’ve realized that while I enjoy it, it’s not something I’d want to pursue as a full-time career. I’m more interested in applying software tools to support other domains like data science or public interest tech.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -322,28 +323,34 @@ I think software development is fun when implementing something I care about. It
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-I picked up many skills including designing, communication, solving puzzles, and understanding the client side of software.
+I picked up several valuable skills throughout the process. Beyond the coding itself, I learned a lot about how to design a component. I also practiced communicating complex ideas clearly through comments and documentation. I also gained a better understanding of how to approach software development with the client in mind.
+
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-Design:
-Communication:
-Problem Solving:
-Interface:
+Object-Oriented Design: Designed and implemented a Java component using interfaces and abstract classes.
+
+Communication: Wrote clear documentation ato explain design decisions.
+
+Problem Solving: Debugged my code implemented test cases to verify functionality and edge cases.
+
+Client-Centered Thinking: Developed a user-focused component by considering user needs in both design and interface.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-I am definitly more interested in it and understand it better but not something I want to pursue as a career.
+I’m definitely more interested in the topic I picked now that I’ve built a component around it. However, this project also clarified for me that while I enjoy technical design and problem solving, I don’t want to pursue pure software engineering as a career. I’d rather integrate these skills into work that focuses more on analysis, policy, or social impact.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-I can contact Professor Jeremy Grifski, and I can make more components following the template he provided through this project.
+To continue on my current career path, I could build more small projects or tools that support causes I care about, like immigrant rights or education access. That would allow me to apply my technical skills in a meaningful way and expand my portfolio. I could also explore more projects or contribute to nonprofits that need digital tools.
+
+In terms of mentorship, I could reach out to Professor Jeremy Grifski for guidance on continuing to build components and applying software development thoughtfully. He’s been helpful through this project and could be a great resource as I keep refining my technical toolkit. I could also stay connected with other faculty mentors, who support my interdisciplinary interests and broader goals.
 
 ### Changelog
 
@@ -381,7 +388,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
