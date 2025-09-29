@@ -1,5 +1,6 @@
-import java.util.List;
+package components;
 
+import components.list.List1L;
 import components.standard.Standard;
 
 /**
@@ -9,7 +10,7 @@ import components.standard.Standard;
  * @author Azra
  * @version 1.0
  */
-public interface JobSearchKernel extends Standard<JobSearchComponent> {
+public interface JobSearchKernel extends Standard<JobSearch> {
     /**
      * Adds a new job posting to the job search system.
      *
@@ -21,14 +22,16 @@ public interface JobSearchKernel extends Standard<JobSearchComponent> {
     void addJob(JobPosting job);
 
     /**
-     * Removes a job posting from the job search system based on its ID.
+     * Removes a job posting from the job search system based on its ID and
+     * returns the ID.
      *
      * @param jobID
      *            The unique identifier of the job to be removed.
      * @requires jobID != null and jobID exists in the system
      * @ensures The job with the given ID is removed from the system.
+     * @return The jobID removed.
      */
-    void removeJob(String jobID);
+    JobPosting removeJob(String jobID);
 
     /**
      * Retrieves a list of all job postings currently in the system.
@@ -36,5 +39,5 @@ public interface JobSearchKernel extends Standard<JobSearchComponent> {
      * @return A list containing all job postings.
      * @ensures The returned list contains all jobs currently in the system.
      */
-    List<JobPosting> getAllJobs();
+    List1L<JobPosting> getAllJobs();
 }

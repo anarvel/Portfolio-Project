@@ -6,19 +6,26 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## 2025.4.12
+## [2025.4.17]
+
+### Added
+
+- Designed test suite for JobSearch component
+- Designed two different use cases for JobSearch component
+
+## [2025.4.10]
 
 ### Added
 
 - Designed kernel implementation for JobSearch component
 
-## 2025.3.27
+## [2025.3.27]
 
 ### Added
 
 - Designed abstract class for Job Search component
 
-## 2025.03.19
+## [2025.03.19]
 
 ### Added
 

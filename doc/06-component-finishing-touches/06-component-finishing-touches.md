@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Azra Narvel
+- **Dot Number**: Narvel.4
+- **Due Date**: 4/18
 
 ## Assignment Overview
 
@@ -49,8 +49,6 @@ Many of these additional techniques are somewhat out of the scope of this
 course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
-
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -140,8 +138,6 @@ merges, you will need to pull the changes from main into your current branch
 to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -307,18 +303,19 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I understand software development a lot better after this project because I got to implement something meaningful to me and start from scratch with the design process. It felt closer to real world development than most class assignments since I had to consider both structure and usability. Building the software component from the ground up helped me see how all the pieces (interfaces, abstract classes, and concrete implementations) fit together to create a usable product.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+Yes, one major gap I noticed was in how different classes and interfaces interact. It was confusing to think about what should be abstracted vs implemented directly. Designing the full component myself helped understsnd those concepts. 
+
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I think software development can be really fun, especially when I get to implement something I care about or find interesting. That creative element of building something from an idea was really fulfilling. However, I’ve realized that while I enjoy it, it’s not something I’d want to pursue as a full-time career. I’m more interested in applying software tools to support other domains like data science or public interest tech.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,29 +323,36 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I picked up several valuable skills throughout the process. Beyond the coding itself, I learned a lot about how to design a component. I also practiced communicating complex ideas clearly through comments and documentation. I also gained a better understanding of how to approach software development with the client in mind.
+
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+Object-Oriented Design: Designed and implemented a Java component using interfaces and abstract classes.
+
+Communication: Wrote clear documentation ato explain design decisions.
+
+Problem Solving: Debugged my code implemented test cases to verify functionality and edge cases.
+
+Client-Centered Thinking: Developed a user-focused component by considering user needs in both design and interface.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I’m definitely more interested in the topic I picked now that I’ve built a component around it. However, this project also clarified for me that while I enjoy technical design and problem solving, I don’t want to pursue pure software engineering as a career. I’d rather integrate these skills into work that focuses more on analysis, policy, or social impact.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+To continue on my current career path, I could build more small projects or tools that support causes I care about, like immigrant rights or education access. That would allow me to apply my technical skills in a meaningful way and expand my portfolio. I could also explore more projects or contribute to nonprofits that need digital tools.
+
+In terms of mentorship, I could reach out to Professor Jeremy Grifski for guidance on continuing to build components and applying software development thoughtfully. He’s been helpful through this project and could be a great resource as I keep refining my technical toolkit. I could also stay connected with other faculty mentors, who support my interdisciplinary interests and broader goals.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -384,7 +388,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
